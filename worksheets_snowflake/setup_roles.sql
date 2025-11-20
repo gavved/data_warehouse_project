@@ -9,6 +9,7 @@ use role securityadmin;
 grant role jobs_dlt_role to user extract_loader;
 
 grant role jobs_reader_role to user gavved;
+grant role jobs_dlt_role to user gavved;
 
 
 grant usage on warehouse dev_wh to role jobs_dlt_role;
