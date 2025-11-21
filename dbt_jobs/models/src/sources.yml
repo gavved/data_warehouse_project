@@ -1,0 +1,6 @@
+sources:
+    - name: jobs
+      schema: staging
+      tables:
+        - name: stg_ads
+          identifier: sales_field_job_ads
