@@ -9,7 +9,7 @@ select
     o.occupation_group,
     o.occupation_field,
     e.employer_name,
-    e.employer_workspace,
+    e.employer_workplace,
     e.workplace_city
 from fct_job_ads as f
 left join dim_employer e on f.employer_id = e.employer_id

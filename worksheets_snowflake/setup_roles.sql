@@ -46,9 +46,6 @@ grant role jobs_ads_dbt_role to user gavved;
 
 grant role jobs_dlt_role to role jobs_ads_dbt_role;
 
-use role jobs_ads_dbt_role;
-
-
 
 
 grant usage,

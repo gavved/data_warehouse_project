@@ -1,8 +1,13 @@
 with stg_job_ads as (select * from {{ source('jobs', 'stg_ads') }})
 
 select
-     employer__name as employer_name,
-     employer__workplace as employer_workspace,
-     workplace_address__municipality as workplace_city
+    employer__name as employer_name,
+    employer__workplace as employer_workplace,
+    employer__organization_number as employer_orgnr,
+    workplace_address__street_address as workplace_street_address,
+    workplace_address__region as workplace_region,
+    workplace_address__postcode as workplace_postcode,
+    workplace_address__municipality as workplace_city,
+    workplace_address__country as workplace_country
 from stg_job_ads
 order by application_deadline

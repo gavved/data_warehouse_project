@@ -1,6 +1,6 @@
 USE role sysadmin;
 
-create warehouse dev_wh;
+create warehouse if not exists dev_wh;
 
 use database jobs;
 

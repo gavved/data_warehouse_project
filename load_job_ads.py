@@ -18,10 +18,10 @@ def jobads_resource(params):
         yield ad
 
 
-def run_pipeline(query, table_name):
+def run_pipeline(table_name):
     pipeline = dlt.pipeline(pipeline_name='jobsearch', destination='snowflake', dataset_name='staging')
 
-    params = {"q": query, "limit": 100}
+    params = {"occupation-field": "RPTn_bxG_ExZ", "limit": 100}
 
     load_info = pipeline.run(jobads_resource(params=params), table_name=table_name)
     print(load_info)
@@ -29,7 +29,6 @@ def run_pipeline(query, table_name):
 
 if __name__ == "__main__":
 
-    query = "Försäljning, inköp, marknadsföring"
     table_name = "sales_field_job_ads"
 
-    run_pipeline(query, table_name)
+    run_pipeline(table_name)
